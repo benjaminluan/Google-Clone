@@ -1,8 +1,7 @@
 import React from "react";
-import "./App.css";
 import Home from "./pages/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
+import SearchPage from "./pages/SearchPage";
 function App() {
   return (
     // BEM
@@ -12,7 +11,7 @@ function App() {
           {/* HOME  SEARCH BUTTON */}
           <Route path="/" element={<Home/>} />
           {/* Search Page (Results)  */}
-          <Route path="/search" />
+          <Route path="/search" element={<SearchPage />}/>
         </Routes>
       </Router>
     </div>
