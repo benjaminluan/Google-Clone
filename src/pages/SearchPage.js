@@ -17,7 +17,7 @@ const SearchPage = () => {
 const { data } = useGoogleSearch(term); 
 
  // const data = Response; MOCK API
- 
+
   return (
     <div className="search__page">
       <div className="search__page-header">
@@ -76,17 +76,13 @@ const { data } = useGoogleSearch(term);
           </p>
           {data?.items.map((item) => (
             <div className="search__page-result">
-              <a href={item.link}>
-                {item.pagemap?.cse_image?.length > 0 &&
-                  item.pagemap?.cse_image[0]?.src && (
-                    <img className="search__page-result-img" src={item.pagemap?.cse_image[0]?.src} alt="" />
-                  )}
-                {item.displayLink} ▽
+              <a className="search__page-link" href={item.link}>
+                {item.displayLink} <MoreVertOutlinedIcon />
               </a>
               <a href="" className="search__page-result-title">
                 <h2>{item.title}</h2>
+                </a>
                 <p className="search__page-result-snippet">{item.snippet}</p>
-              </a>
             </div>
           ))}
         </div>
