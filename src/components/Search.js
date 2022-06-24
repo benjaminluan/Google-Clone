@@ -13,13 +13,14 @@ const Search = ({ hideButtons = false }) => {
   const [{}, dispatch] = useStateValue();
 
   const search = (e) => {
-    e.preventDefault();
-    console.log("you hit search");
-    navigate("/search");
-    dispatch({
+    if (input !== "") {
+      e.preventDefault();
+      navigate("/search");
+      dispatch({
         type: actionTypes.SET_SEARCH_TERM,
-        term: input
-    })
+        term: input,
+      });
+    } else console.log("nothing")
   };
 
   return (

@@ -27,7 +27,7 @@ const Home = () => {
           alt=""
         />
         <div className="home__input--container">
-            <Search />
+            <Search  />
         </div>
       </div>
     </div>

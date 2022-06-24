@@ -77,7 +77,7 @@ const { data } = useGoogleSearch(term);
           {data?.items.map((item) => (
             <div className="search__page-result">
               <a className="search__page-link" href={item.link}>
-                {item.displayLink} <MoreVertOutlinedIcon />
+                {item.displayLink} <MoreVertOutlinedIcon  />
               </a>
               <a href="" className="search__page-result-title">
                 <h2>{item.title}</h2>
