@@ -14,22 +14,24 @@ import MoreVertOutlinedIcon from "@mui/icons-material/MoreVertOutlined";
 const SearchPage = () => {
   const [{ term }, dispatch] = useStateValue();
 
-const { data } = useGoogleSearch(term); 
+  const { data } = useGoogleSearch(term);
 
- // const data = Response; MOCK API
+  // const data = Response; MOCK API
 
   return (
     <div className="search__page">
       <div className="search__page-header">
-        <Link to="/">
-          <img
-            src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
-            alt=""
-            className="search__page-logo"
-          />
-        </Link>
-        <div className="search__page-header-body">
+        <div className="search__page-top">
+          <Link to="/">
+            <img
+              src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+              alt=""
+              className="search__page-logo"
+            />
+          </Link>
           <Search hideButtons />
+        </div>
+        <div className="search__page-header-body">
           <div className="search__page-options">
             <div className="search__page-options-left">
               <div className="search__page-option">
@@ -77,12 +79,12 @@ const { data } = useGoogleSearch(term);
           {data?.items.map((item) => (
             <div className="search__page-result">
               <a className="search__page-link" href={item.link}>
-                {item.displayLink} <MoreVertOutlinedIcon  />
+                {item.displayLink} <MoreVertOutlinedIcon />
               </a>
               <a href="" className="search__page-result-title">
                 <h2>{item.title}</h2>
-                </a>
-                <p className="search__page-result-snippet">{item.snippet}</p>
+              </a>
+              <p className="search__page-result-snippet">{item.snippet}</p>
             </div>
           ))}
         </div>
