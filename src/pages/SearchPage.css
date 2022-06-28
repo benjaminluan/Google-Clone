@@ -4,7 +4,7 @@
 .search__page-logo {
   object-fit: contain;
   height: 50px;
-  margin-right: 50px;
+  margin-right: 40px;
 }
 
 .search__page-header {
@@ -25,7 +25,7 @@
 
 .search__page-header > .search__page-top > .search {
   width: 70%;
-  max-width: 765px;
+  max-width: 760px;
 }
 
 .search__page-header > .search__page-top > .search > .search__input {
@@ -37,8 +37,8 @@
 }
 
 .search__page-header-body{
-  margin-left: 200px;
-  width: 70%;
+  margin-left: 10%;
+  width: 100%;
 }
 
 
