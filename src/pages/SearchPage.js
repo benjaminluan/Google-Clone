@@ -78,9 +78,12 @@ const SearchPage = () => {
           </p>
           {data?.items.map((item) => (
             <div className="search__page-result">
-              <a className="search__page-link" href={item.link}>
-                {item.displayLink} <MoreVertOutlinedIcon />
-              </a>
+              <div className="search__page-link-wrapper">
+                <a className="search__page-link" href={item.link}>
+                  {item.displayLink}
+                </a>
+                <MoreVertOutlinedIcon />
+              </div>
               <a href="" className="search__page-result-title">
                 <h2>{item.title}</h2>
               </a>

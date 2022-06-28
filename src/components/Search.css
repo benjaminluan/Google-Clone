@@ -9,6 +9,7 @@
   margin-top: 40px;
   padding: 10px 20px;
   max-width: 560px;
+  overflow: hidden;
 }
 
 .search__input > input {
