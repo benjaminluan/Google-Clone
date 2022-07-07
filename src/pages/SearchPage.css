@@ -71,9 +71,7 @@
 }
 
 
-.search__page-result-title {
-  text-decoration: none;
-}
+
 .search__page-result-title:hover {
   text-decoration: underline;
 }
